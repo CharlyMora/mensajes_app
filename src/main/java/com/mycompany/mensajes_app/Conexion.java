@@ -19,7 +19,7 @@ public class Conexion {
         try{
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mensajes_app","root","")                          ;
             if(connection != null){
-                System.out.println("conexion exitosa");
+                System.out.println("que gonorrea, conexion exitosa");
             }else{
                 System.out.println("la cagastes");
             }
