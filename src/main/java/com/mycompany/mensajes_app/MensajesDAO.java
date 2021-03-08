@@ -41,7 +41,7 @@ public class MensajesDAO {
             ResultSet rs = null;
             try{
                 String query = "SELECT * FROM mensajes";
-                ps = conexion. prepareStatement(query);
+                ps = conexion.prepareStatement(query);
                 rs = ps.executeQuery();
                 System.out.println("++++++++++");
                 while(rs.next()){
@@ -55,7 +55,7 @@ public class MensajesDAO {
                 
                 System.out.println("tan tan, todos los mensajes obtenidos");
             }catch(SQLException ex){
-                System.out.println("pailis no salieron los mesajes en la DB " +ex);
+                System.out.println("pailis no salieron los mesajes en la DB por esto:" +ex);
             }
         }catch(SQLException e){
             System.out.println("yuca no hay base de datos o algo jodio por lo following: "+e);
