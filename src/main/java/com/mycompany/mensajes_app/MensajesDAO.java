@@ -18,8 +18,15 @@ public class MensajesDAO {
         Conexion db_connect = new Conexion();
         try(Connection conexion = db_connect.get_connection()){
             PreparedStatement ps =null;
-            try(){
-            }catch(){
+            try{
+                String query = "INSERT INTO mensajes (mensaje, autor_mensaje) VALUES (?,?)";
+                ps = conexion. prepareStatement(query);
+                ps.setString(1, mensaje.getMensaje());
+                ps.setString(2, mensaje.getAutor_mensaje());
+                ps.executeUpdate();
+                System.out.println("re teso, mensaje creado en la base de datos");
+            }catch(SQLException ex){
+                System.out.println("la mierda vea aca lo que paso " +ex);
             }
         }catch(SQLException e){
             System.out.println("vea parce por esto no se supio el mensaje "+e);
