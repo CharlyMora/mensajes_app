@@ -5,13 +5,25 @@
  */
 package com.mycompany.mensajes_app;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 /**
  *
  * @author Andres
  */
 public class MensajesDAO {
     public static void crearMensajeDB(Mensajes mensaje){
-    
+        Conexion db_connect = new Conexion();
+        try(Connection conexion = db_connect.get_connection()){
+            PreparedStatement ps =null;
+            try(){
+            }catch(){
+            }
+        }catch(SQLException e){
+            System.out.println("vea parce por esto no se supio el mensaje "+e);
+        }
     }
     
     public static void leerMensajesDB(){
