@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @author Andres
  */
 public class MensajesDAO {
-    public static void crearMensajeDB(Mensajes mensaje){
+    public static void crearMensajeDB(Mensaje mensaje){
         Conexion db_connect = new Conexion();
         try(Connection conexion = db_connect.get_connection()){
             PreparedStatement ps =null;
@@ -41,7 +41,7 @@ public class MensajesDAO {
     
     }
     
-    public static void actualizarMensajeDB(Mensajes mensaje){
+    public static void actualizarMensajeDB(Mensaje mensaje){
     
     }
 }

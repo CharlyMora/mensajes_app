@@ -20,7 +20,7 @@ public class mensajesService {
         System.out.println("tu nombre");
         String nombre = sc.nextLine();
         
-        Mensajes mensaje = new Mensajes();
+        Mensaje mensaje = new Mensaje();
         mensaje.setMensaje(entrada);
         mensaje.setAutor_mensaje(nombre);
         MensajesDAO.crearMensajeDB(mensaje);

@@ -9,17 +9,17 @@ package com.mycompany.mensajes_app;
  *
  * @author Andres
  */
-public class Mensajes {
+public class Mensaje {
     int id_mensae;
     String mensaje;
     String autor_mensaje;
     String fecha_mensaje;
     
-    public Mensajes(){
+    public Mensaje(){
         
     }
 
-    public Mensajes(String mensaje, String autor_mensaje, String fecha_mensaje) {
+    public Mensaje(String mensaje, String autor_mensaje, String fecha_mensaje) {
         this.mensaje = mensaje;
         this.autor_mensaje = autor_mensaje;
         this.fecha_mensaje = fecha_mensaje;
