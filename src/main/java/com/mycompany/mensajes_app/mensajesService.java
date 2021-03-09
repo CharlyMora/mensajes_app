@@ -38,16 +38,19 @@ public class mensajesService {
     }
     
     public static void editarMensaje(){
+        
         Scanner sc = new Scanner(System.in);
         
         System.out.println("escriba el id del mensaje a editar");
         int id_mensaje = sc.nextInt();
-        
-        System.out.println("escriba un mensaje nuevo");
-        String entrada =sc.nextLine();
-        
+        sc.nextLine();
         System.out.println("escriba nombre nuevo");
         String nombre = sc.nextLine();
+        System.out.println("escriba mensaje nuevo");
+        String entrada = sc.nextLine();
+        
+        
+        
         
         Mensaje mensaje = new Mensaje();
         mensaje.setMensaje(entrada);
