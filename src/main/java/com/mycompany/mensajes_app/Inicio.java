@@ -25,8 +25,8 @@ public class Inicio {
             System.out.println("Aplicacion de mensajes");
             System.out.println(" 1. crear");
             System.out.println(" 2. listar");
-            System.out.println(" 3. editar");
-            System.out.println(" 4. eliminar");
+            System.out.println(" 3. eliminar");
+            System.out.println(" 4. editar");
             System.out.println(" 5. salir");
             //read option
             opcion =sc.nextInt();

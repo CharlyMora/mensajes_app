@@ -63,10 +63,42 @@ public class MensajesDAO {
     }
     
     public static void borrarMensajeDB(int id_mensaje){
-    
+        Conexion db_connect = new Conexion();
+        try(Connection conexion = db_connect.get_connection()){
+            PreparedStatement ps =null;
+            try{
+                String query = "DELETE FROM mensajes WHERE id_mensaje = ?";
+                ps = conexion.prepareStatement(query);
+                ps.setInt(1, id_mensaje);
+                ps.executeUpdate();
+
+                System.out.println("bien hecho, mensaje de mierda borrado");
+            }catch(SQLException ex){
+                System.out.println("nanay no se pudo borrar el mensaje porque:" +ex);
+            }
+        }catch(SQLException e){
+            System.out.println("yuca no hay base de datos o algo jodio por lo following: "+e);
+        }
     }
     
     public static void actualizarMensajeDB(Mensaje mensaje){
-    
+        Conexion db_connect = new Conexion();
+        try(Connection conexion = db_connect.get_connection()){
+            PreparedStatement ps =null;
+            try{
+                String query = "UPDATE mensajes SET mensaje =?, autor_mensaje=? WHERE id_mensaje = ?";
+                ps = conexion.prepareStatement(query);
+                ps.setString(1, mensaje.mensaje);
+                ps.setString(2, mensaje.autor_mensaje);
+                ps.setInt(3, mensaje.id_mensae);
+                ps.executeUpdate();
+
+                System.out.println("por fin, mensaje actualizado y mejorado");
+            }catch(SQLException ex){
+                System.out.println("nanay no se pudo hacer el update del mensaje porque:" +ex);
+            }
+        }catch(SQLException e){
+            System.out.println("yuca no hay base de datos o algo jodio por lo following: "+e);
+        }
     }
 }
